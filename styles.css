@@ -79,3 +79,45 @@ header {
 #sun-icon {
     display: none;
 }
+
+main {
+    width: 83%;
+}
+
+#header-row {
+    max-height: 80%;
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+h2 {
+    font-size: 36px;
+}
+
+button {
+    border-radius: 25px;
+}
+
+.btn {
+    height: 50px;
+    width: auto;
+    font-size: larger;
+    padding: 10px 20px;
+    border: 1.5px solid var(--neutral-300);
+    cursor: pointer;
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+#all-btn {
+    background-color: var(--red-700);
+    color: var(--neutral-0);
+}
+
+#active-btn,
+#inactive-btn {
+    background-color: var(--neutral-0);
+}
