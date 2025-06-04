@@ -7,6 +7,8 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   
   <title>Frontend Mentor | Browser extensions manager UI</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
@@ -18,37 +20,41 @@
   <header>
     <img src="./assets/images/logo.svg" alt="Our logo" />
     <h3>Extensions</h3>
-    <img src="./assets/images/icon-moon.svg" alt="Switch to dark or light mode"/>
-    <img src="./assets/images/icon-sun.svg" alt="Switch to dark or light mode" />
+    <button id="theme-toggle" aria-label="Toggle dark/light mode">
+      <img id="moon-icon" src="./assets/images/icon-moon.svg" alt="Dark mode"/>
+      <img id="sun-icon" src="./assets/images/icon-sun.svg" alt="Light mode" />
+    </button>
   </header>
   <main>
     <div id="Header-row">
       <h2>Extensions List</h2>
       <div id="filter-buttons">
         <button class="btn" id="all-btn">All</button>
-        <button class="btn" id="active-btn">All</button>
-        <button class="btn" id="inactive-btn">All</button>
+        <button class="btn" id="active-btn">Active</button>
+        <button class="btn" id="inactive-btn">Inactive</button>
       </div>
     </div>
     <section id="card-container">
-
-  <!-- Each card: -->
-      <div id="card-content">
-        <div id="card-icon">
-          <img src="" alt="" />
+      <div class="extension-card">
+        <div class="card-content">
+          <div class="card-icon">
+            <img src="./assets/images/icon-sample.svg" alt="Extension logo" />
         </div>
-        <div id="card-info">
-          <h3></h3>
-          <p></p>
+        <div class="card-info">
+          <h3>Extension Name</h3>
+          <p>Extension Description</p>
         </div>
       </div>
       <div id="card-bottom">
-        <button class="btn" id="remove-btn">Remove</button>
-        <button class="toggle-switch"></button>
-      </div>
-
-    </section>
-  </main>
+        <button class="btn remove-btn">Remove</button>
+      <label class="switch">
+        <input type="checkbox" class="toggle-switch">
+        <span class="slider round"></span>
+      </label>
+    </div>
+  </div>
+</section>
+</main>
   
 
   <!-- If you plan to use the JSON file to populate the data dynamically, you can delete the content below -->
