@@ -20,10 +20,10 @@ document.addEventListener("DOMContentLoaded", () => {
         container.innerHTML = "";
 
         list.forEach((ext) => {
-            const card = DocumentTimeline.createElement("div");
+            const card = document.createElement("div");
             card.className = "extension-card";
 
-            card.innterHTML = `
+            card.innerHTML = `
             <div class="card-content">
                 <div class="card-icon">
                     <img src="${ext.logo}" alt="${ext.name} logo" />
@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
-    function attachEventListers() {
+    function attachEventListeners() {
         document.querySelectorAll(".remove-btn").forEach((btn) => {
             btn.addEventListener("click", (e) => {
                 const id = parseInt(e.target.dataset.id);
@@ -79,4 +79,21 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("inactive-btn").addEventListener("click", () => {
         renderExtensions(extensions.filter((ext) => !ext.isActive));
         });
+   
+
+    const moonIcon = document.getElementById('moon-icon');
+    const sunIcon = document.getElementById('sun-icon');
+
+    moonIcon.addEventListener('click', () => {
+        document.body.classList.add('dark-mode');
+        moonIcon.style.display = 'none';
+        sunIcon.style.display = 'inline';
     });
+
+    sunIcon.addEventListener('click', () => {
+        document.body.classList.remove('dark-mode');
+        sunIcon.style.display = 'none';
+        moonIcon.style.display = 'inline';
+    });
+
+});
