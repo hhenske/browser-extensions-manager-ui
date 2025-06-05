@@ -121,3 +121,115 @@ button {
 #inactive-btn {
     background-color: var(--neutral-0);
 }
+
+#card-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    /* max-width: 1200px; */
+    width: 96%;
+}
+
+.extension-card {
+    background-color: var(--neutral-0);
+    box-shadow: 0 2px 4px var(--neutral-300);
+    border-radius: 15px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-content {
+    display: grid;
+    grid-template-columns: 60px auto;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+card-icon img {
+    width: 100%;
+    max-width: 60px;
+    height: auto;
+    display: block;
+}
+
+card-info h3 {
+    margin: 0 0 0.25rem;
+    font-size: 1.1rem;
+}
+
+card-info p {
+    margin: 0;
+    font-size: 0.95rem;
+    font-weight: var(--fw-regular);
+}
+
+.card-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.btn.remove-btn {
+    height: 35px;
+    font-size: 16px;
+    font-weight: var(--fw-medium);
+    background: var(--neutral-0);
+    padding: 5px 15px
+}
+
+input.switch-input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+
+
+.slider {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 16px;
+    background-color: var(--neutral-300);
+    border-radius: 34px;
+    transition: background-color 0.3s;
+    padding: 2px;
+}
+/* 
+slider circle */
+.slider::before {
+    content: "";
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    left: 3px;
+    background-color: var(--neutral-0);
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+
+/* toggle ON */
+input:checked + .slider {
+    background-color: var(--red-500);
+}
+
+input:checked + .slider::before {
+    transform: translateX(15px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+@media screen and (min-width: 768px) {
+    #card-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
