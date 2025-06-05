@@ -125,27 +125,22 @@ button {
     font-size: 20px;
 }
 
-#all-btn {
+btn.active {
     background-color: var(--red-700);
     color: var(--neutral-0);
-}
-
-body.dark-mode #all-btn {
     border: none;
-    color: var(--neutral-900);
-    background-color: var(--red-500);
 }
 
-#active-btn,
-#inactive-btn {
-    background-color: var(--neutral-0);
-}
 
-body.dark-mode #active-btn,
-body.dark-mode #inactive-btn {
+body.dark-mode .btn {
     background-color: var(--neutral-700);
-    border: none;
     color: var(--neutral-0);
+    border: none;
+}
+
+body.dark-mode .btn.active {
+  background-color: var(--red-500);
+  color: var(--neutral-900);
 }
 
 #card-container {

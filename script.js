@@ -99,6 +99,16 @@ document.addEventListener("DOMContentLoaded", () => {
         moonIcon.style.display = 'inline';
     });
 
+  document.querySelectorAll(".btn").forEach((button) => {
+    button.addEventListener("click", () => {
+        document.querySelectorAll(".btn").forEach((btn) => {
+            btn.classList.remove("active");
+        });
+        button.classList.add("active");
+    });
+
+
+  })  
 
     
 
