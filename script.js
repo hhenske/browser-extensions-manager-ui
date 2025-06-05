@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <div class="card-bottom">
             <button class="btn remove-btn" data-id="${ext.id}">Remove</button>
             <label class="switch">
-                <input type="checkbox" class="toggle-switch" data-id="${ext.id}" ${ext.isActive ? "checked" : ""}>
+                <input type="checkbox" class="switch-input toggle-switch" data-id="${ext.id}" ${ext.isActive ? "checked" : ""}>
                 <span class="slider round"></span>
             </label>
         </div>
