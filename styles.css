@@ -120,17 +120,35 @@ button {
     font-size: larger;
     padding: 10px 20px;
     border: 1.5px solid var(--neutral-300);
+    background-color: var(--neutral-0);
     cursor: pointer;
     margin-left: 10px;
     font-size: 20px;
 }
 
-btn.active {
+.btn:focus,
+icon:focus {
+    outline: none;
+    border: 1px solid var(--red-500)
+}
+
+body.dark-mode .btn:focus,
+body.dark-mode .icon:focus {
+    outline: none;
+    border: 1px solid var(--red-500);
+}
+
+.btn.active {
     background-color: var(--red-700);
     color: var(--neutral-0);
     border: none;
 }
 
+body.dark-mode .btn.active {
+    background-color: var(--red-700);
+    color: var(--neutral-0);
+    
+}
 
 body.dark-mode .btn {
     background-color: var(--neutral-700);
@@ -138,9 +156,10 @@ body.dark-mode .btn {
     border: none;
 }
 
-body.dark-mode .btn.active {
-  background-color: var(--red-500);
-  color: var(--neutral-900);
+body.dark-mode .btn.active:focus {
+    background-color: var(--red-500);
+    color: var(--neutral-900);
+    border:  1px solid var(--neutral-800)
 }
 
 #card-container {
@@ -208,12 +227,18 @@ card-info h3 {
     font-size: 16px;
     font-weight: var(--fw-medium);
     background: var(--neutral-0);
-    padding: 5px 15px
+    padding: 5px 15px;
+   
 }
 
 body.dark-mode .btn.remove-btn {
     background-color: var(--neutral-800);
     color: var(--neutral-0);
+     border: 1px solid var(--neutral-300);
+}
+
+body.dark-mode .btn.remove-btn:focus {
+    border: 1px solid var(--red-500);
 }
 
 input.switch-input[type="checkbox"] {
