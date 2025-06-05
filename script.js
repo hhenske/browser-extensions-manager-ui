@@ -83,17 +83,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const moonIcon = document.getElementById('moon-icon');
     const sunIcon = document.getElementById('sun-icon');
+    const logo = document.getElementById("logo");
 
     moonIcon.addEventListener('click', () => {
         document.body.classList.add('dark-mode');
+        logo.src = "./assets/images/logo-light.png";
         moonIcon.style.display = 'none';
         sunIcon.style.display = 'inline';
     });
 
     sunIcon.addEventListener('click', () => {
+        logo.src = "./assets/images/logo.svg";
         document.body.classList.remove('dark-mode');
         sunIcon.style.display = 'none';
         moonIcon.style.display = 'inline';
     });
 
+
+    
+
+    
 });
