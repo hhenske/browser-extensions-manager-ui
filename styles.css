@@ -89,8 +89,20 @@ body.dark-mode #theme-toggle {
     width: 25px;
 }
 
+body.dark-mode #moon-icon {
+    display: none
+}
+
+body.dark-mode #sun-icon {
+    display: inline;
+}
+
 #sun-icon {
     display: none;
+}
+
+body:not(.cdark-mode) #moon-icon {
+    display: inline;
 }
 
 main {
@@ -125,18 +137,35 @@ button {
     margin-left: 10px;
     font-size: 20px;
 }
-
+ 
 .btn:focus,
-icon:focus {
+.btn.remove-btn:focus,
+.switch-input:focus + .slider {
     outline: none;
     border: 1px solid var(--red-500)
-}
+} 
 
+.btn.remove-btn:focus {
+    background-color: var(--neutral-200);
+}
+ 
 body.dark-mode .btn:focus,
-body.dark-mode .icon:focus {
+body.dark-mode .btn.remove-btn:focus,
+body.dark-mode .switch-input:focus + slider {
     outline: none;
     border: 1px solid var(--red-500);
 }
+
+body.dark-mode .btn.remove-btn:focus {
+    background-color: var(--neutral-600);
+}
+
+body.dark-mode .btn.active:focus {
+    background-color: var(--red-500);
+    color: var(--neutral-900);
+    border: 1px solid var(--red-500)
+}
+
 
 .btn.active {
     background-color: var(--red-700);
@@ -196,7 +225,7 @@ body.dark-mode .extension-card {
     margin-bottom: 1rem;
 }
 
-card-icon img {
+.card-icon img {
     width: 100%;
     max-width: 60px;
     height: auto;
@@ -231,15 +260,17 @@ card-info h3 {
    
 }
 
+.btn.remove-btn:focus {
+     border: 1px solid var(--red-500);
+     background-color: var(--neutral-400);
+}
+
 body.dark-mode .btn.remove-btn {
     background-color: var(--neutral-800);
     color: var(--neutral-0);
      border: 1px solid var(--neutral-300);
 }
 
-body.dark-mode .btn.remove-btn:focus {
-    border: 1px solid var(--red-500);
-}
 
 input.switch-input[type="checkbox"] {
     position: absolute;
