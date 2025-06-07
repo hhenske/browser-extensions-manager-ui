@@ -27,7 +27,7 @@ Users should be able to:
 
 ### Screenshot
 ![Présentation sans titre (1)](https://github.com/user-attachments/assets/8085e07c-8e8b-443e-b4b5-1d7aacbd1f99)
-![Présentation sans titre](https://github.com/user-attachments/assets/ab476ebb-f2fe-42fe-9882-6b775e524509)
+![Présentation sans titre (2)](https://github.com/user-attachments/assets/8e071d76-b164-4bf1-b1aa-cec837ca5437)
 ![Présentation sans titre](https://github.com/user-attachments/assets/f85069ab-3f15-40b1-900d-b215b5138ed4)
 
 ## My process
