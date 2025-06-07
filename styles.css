@@ -77,7 +77,7 @@ body.dark-mode #logo {
     width: 55px;
     border: none;
     border-radius: 15px;
-    background-color: var(--netrual-0);
+    background-color: var(--neutral-0);
 }
 
 body.dark-mode #theme-toggle {
@@ -108,8 +108,9 @@ body.dark-mode #sun-icon {
     display: none;
 }
 
-body.dark-mode #sun-icon:hover {
-    background-color: var(--red-400);
+body.dark-mode #theme-toggle:hover {
+    background-color: var(--red-700);
+    cursor: pointer;
 }
 
 body.dark-mode .btn.active:hover {
@@ -122,7 +123,7 @@ body.dark-mode .btn:hover {
 
 body.dark-mode .btn.remove-btn:hover {
     background-color: var(--red-700);
-    color: var(--netral-900);
+    color: var(--neutral-900);
 }
 
 body.dark-mode input checked + .slider:hover {
@@ -130,15 +131,21 @@ body.dark-mode input checked + .slider:hover {
 }
 
 body.dark-mode input:not(:checked) + slider:hover {
-    background-color: var(--neutral-200);
+    background-color: var(--neutral-100);
 }
 
 body:not(.dark-mode) #moon-icon {
     display: inline;
 }
 
-#moon-icon:hover {
-    background-color: var(--neutral-600);
+#theme-toggle:hover {
+    outline: 2px solid var(--neutral-900);
+    box-shadow: 0 0 0 2px var(--red-500);
+}
+
+#theme-toggle:hover {
+    background-color: var(--neutral-300);
+    cursor: pointer;
 }
 
 .btn.active:hover {
@@ -151,8 +158,8 @@ body:not(.dark-mode) #moon-icon {
 }
 
 .btn.remove-btn:hover {
-    background-color: var(--red-400);
-    color: var(--netrual-0);
+    background-color: var(--red-500); /* red */
+    color: var(--neutral-0);           /* white text */
 }
 
 input:checked + .slider:hover {
@@ -160,6 +167,10 @@ input:checked + .slider:hover {
 }
 
 input:not(:checked) + .slider:hover {
+    background-color: var(--neutral-300);
+}
+
+body:not(.dark-mode) input:not(:checked) + .slider:hover {
     background-color: var(--neutral-300);
 }
 
@@ -184,6 +195,11 @@ button {
     border-radius: 25px;
 }
 
+button,
+.slider {
+    transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+}
+
 button:hover,
 .btn:hover,
 .btn.remove-btn:hover,
@@ -206,7 +222,7 @@ button:hover,
 
 :focus-visible {
     outline: none;
-    box-shadow: 0 0 2px var(--netral-900), 0 0 0 4px var(--red-500);
+    box-shadow: 0 0 2px var(--neutral-900), 0 0 0 4px var(--red-500);
 }
 
 .btn.active {
