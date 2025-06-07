@@ -69,7 +69,7 @@ body.dark-mode header {
 }
 
 body.dark-mode #logo {
-    filter: brightness(0) inverst(1);
+    filter: brightness(0) inverse(1);
 }
 
 #theme-toggle {
@@ -77,10 +77,17 @@ body.dark-mode #logo {
     width: 55px;
     border: none;
     border-radius: 15px;
+    background-color: var(--netrual-0);
 }
 
 body.dark-mode #theme-toggle {
     background-color: var(--neutral-700);
+}
+
+#theme-toggle:focus {
+    Outline: 2px solid var(--red-500);
+    outline-offset: 2px;
+    box-shadow: 0 0 0 2px var(--neutral-900), 0 0 0 4px var(--red-500);
 }
 
 #moon-icon,
@@ -101,7 +108,7 @@ body.dark-mode #sun-icon {
     display: none;
 }
 
-body:not(.cdark-mode) #moon-icon {
+body:not(.dark-mode) #moon-icon {
     display: inline;
 }
 
@@ -110,10 +117,10 @@ main {
 }
 
 #header-row {
-    max-height: 80%;
+    /* max-height: 80%; */
     padding: 15px;
     display: flex;
-    flex-direction: row;
+    /* flex-direction: row; */
     align-items: center;
     justify-content: space-between;
 }
@@ -128,8 +135,7 @@ button {
 
 .btn {
     height: 50px;
-    width: auto;
-    font-size: larger;
+    /* width: auto; */
     padding: 10px 20px;
     border: 1.5px solid var(--neutral-300);
     background-color: var(--neutral-0);
@@ -137,35 +143,11 @@ button {
     margin-left: 10px;
     font-size: 20px;
 }
- 
-.btn:focus,
-.btn.remove-btn:focus,
-.switch-input:focus + .slider {
+
+:focus-visible {
     outline: none;
-    border: 1px solid var(--red-500)
-} 
-
-.btn.remove-btn:focus {
-    background-color: var(--neutral-200);
+    box-shadow: 0 0 2px var(--netral-900), 0 0 0 4px var(--red-500);
 }
- 
-body.dark-mode .btn:focus,
-body.dark-mode .btn.remove-btn:focus,
-body.dark-mode .switch-input:focus + slider {
-    outline: none;
-    border: 1px solid var(--red-500);
-}
-
-body.dark-mode .btn.remove-btn:focus {
-    background-color: var(--neutral-600);
-}
-
-body.dark-mode .btn.active:focus {
-    background-color: var(--red-500);
-    color: var(--neutral-900);
-    border: 1px solid var(--red-500)
-}
-
 
 .btn.active {
     background-color: var(--red-700);
@@ -173,22 +155,25 @@ body.dark-mode .btn.active:focus {
     border: none;
 }
 
-body.dark-mode .btn.active {
-    background-color: var(--red-700);
-    color: var(--neutral-0);
-    
-}
-
 body.dark-mode .btn {
     background-color: var(--neutral-700);
-    color: var(--neutral-0);
+    color:var(--netrual-0);
+    border:none;
+}
+
+body.dark-mode .btn.active {
+    background-color: var(--red-500);
+    color: var(--neutral-900);
     border: none;
 }
 
-body.dark-mode .btn.active:focus {
-    background-color: var(--red-500);
-    color: var(--neutral-900);
-    border:  1px solid var(--neutral-800)
+.btn:focus,
+.btn.remove-btn:focus,
+.switch-input:focus + .slider,
+#theme-toggle:focus {
+    outline: 2px solid var(--red-500);
+    outline-offset: 2px;
+    box-shadow: 0 0 0 2px var(--neutral-900), 0 0 0 4px var(--red-500);
 }
 
 #card-container {
@@ -228,11 +213,11 @@ body.dark-mode .extension-card {
 .card-icon img {
     width: 100%;
     max-width: 60px;
-    height: auto;
-    display: block;
+    /* height: auto; */
+    /* display: block; */
 }
 
-card-info h3 {
+.card-info h3 {
     margin: 0 0 0.25rem;
     font-size: 1.1rem;
 }
@@ -255,20 +240,21 @@ card-info h3 {
     height: 35px;
     font-size: 16px;
     font-weight: var(--fw-medium);
-    background: var(--neutral-0);
+    background: transparent;
     padding: 5px 15px;
-   
+    border: 1px solid transparent;
+    color: var(--neutral-900);
 }
 
 .btn.remove-btn:focus {
      border: 1px solid var(--red-500);
-     background-color: var(--neutral-400);
+     background-color: var(--neutral-100);
 }
 
 body.dark-mode .btn.remove-btn {
     background-color: var(--neutral-800);
-    color: var(--neutral-0);
-     border: 1px solid var(--neutral-300);
+    /* color: var(--neutral-0); */
+    border: 1px solid var(--neutral-300);
 }
 
 
@@ -320,6 +306,11 @@ input:checked + .slider::before {
 
 .slider.round {
     border-radius: 34px;
+}
+
+.switch-input:focus + .slider {
+    outline: 2px solid var(--red-500);
+    box-shadow: 0 0 0 2px var(--neutral-900), o o o 4px var(--red-500);
 }
 
 
