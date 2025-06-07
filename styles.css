@@ -108,8 +108,59 @@ body.dark-mode #sun-icon {
     display: none;
 }
 
+body.dark-mode #sun-icon:hover {
+    background-color: var(--red-400);
+}
+
+body.dark-mode .btn.active:hover {
+    background-color: var(--red-400);
+}
+
+body.dark-mode .btn:hover {
+    background-color: var(--neutral-600);
+}
+
+body.dark-mode .btn.remove-btn:hover {
+    background-color: var(--red-700);
+    color: var(--netral-900);
+}
+
+body.dark-mode input checked + .slider:hover {
+    background-color: var(--red-700);
+}
+
+body.dark-mode input:not(:checked) + slider:hover {
+    background-color: var(--neutral-200);
+}
+
 body:not(.dark-mode) #moon-icon {
     display: inline;
+}
+
+#moon-icon:hover {
+    background-color: var(--neutral-600);
+}
+
+.btn.active:hover {
+    background-color: var(--red-400);
+}
+
+.btn:hover {
+    background-color: var(--neutral-100);
+    color: var(--neutral-600)
+}
+
+.btn.remove-btn:hover {
+    background-color: var(--red-400);
+    color: var(--netrual-0);
+}
+
+input:checked + .slider:hover {
+    background-color: var(--red-400);
+}
+
+input:not(:checked) + .slider:hover {
+    background-color: var(--neutral-300);
 }
 
 main {
@@ -131,6 +182,15 @@ h2 {
 
 button {
     border-radius: 25px;
+}
+
+button:hover,
+.btn:hover,
+.btn.remove-btn:hover,
+.slider:hover,
+#moon-icon:hover,
+#sun-icon:hover {
+    cursor: pointer;
 }
 
 .btn {
