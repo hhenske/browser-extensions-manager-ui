@@ -412,7 +412,7 @@ input:checked + .slider::before {
 
 @media (max-width: 986) {
     #card-container {
-        grid-template-comlumns: repeat(2, minmax(280px, 1 fr));
+        grid-template-columns: repeat(2, minmax(280px, 1 fr));
         justify-content: center;
     }
 }
